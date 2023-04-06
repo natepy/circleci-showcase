@@ -7,3 +7,8 @@ jobs:
     steps:
       - checkout
       - run: java --version
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
