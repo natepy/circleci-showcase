@@ -7,7 +7,7 @@ public class IoTDevice {
     public IoTDevice() {
         readings = new ArrayList<>();
     }
-    
+
     public void saveReading(Double reading) {
         readings.add(reading);
     }
