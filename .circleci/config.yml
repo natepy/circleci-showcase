@@ -18,3 +18,11 @@ jobs:
           name: Run Tests
           command: mvn test
           working_directory: ~/circleci-showcase
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
