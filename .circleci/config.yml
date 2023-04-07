@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run: java --version
-      - store_artifacts:
-          path: my-app.jar
-          destination: my-app-${CIRCLE_BUILD_NUM}.jar
 
   test:
     docker:
