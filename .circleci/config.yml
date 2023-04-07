@@ -8,9 +8,9 @@ jobs:
       - checkout
       - run: java --version
 
-    test:
-      docker:
-        - image: cimg/openjdk:17.0.5
-      steps:
-          - checkout
-          - run: mvn test
+  test:
+    docker:
+      - image: cimg/openjdk:17.0.5
+    steps:
+      - checkout
+      - run: mvn test
