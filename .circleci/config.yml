@@ -20,11 +20,11 @@ jobs:
       - store_test_results:
           path: target/surefire-reports
           prefix: test-results/
-      - persist_to_workspace:
+        persist_to_workspace:
           root: ~/repo
           paths:
             - target/surefire-reports
-      - when: always
+        when: always
         artifacts:
           paths:
             - target/surefire-reports
