@@ -6,7 +6,7 @@ jobs:
       - image: cimg/openjdk:17.0.5
     steps:
       - checkout
-      - run: java --version
+      - run: java -version
 
   test:
     docker:
@@ -16,15 +16,3 @@ jobs:
       - run:
           name: Run Tests
           command: mvn test
-          working_directory: ~/repo
-      - store_test_results:
-          path: target/surefire-reports
-          prefix: test-results/
-        persist_to_workspace:
-          root: ~/repo
-          paths:
-            - target/surefire-reports
-        when: always
-        artifacts:
-          paths:
-            - target/surefire-reports
