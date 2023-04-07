@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: java --version
-  - store_artifacts:
+    - store_artifacts:
       path: /tmp/core_dumps
 
   test:
