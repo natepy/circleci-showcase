@@ -17,16 +17,7 @@ jobs:
           name: Run Tests
           command: mvn test
       - store_test_results:
-          path: target/surefire-reports
-          prefix: test-results/
-          persist_to_workspace:
-            root: ~/circleci-showcase
-            paths:
-              - target/surefire-reports
-          when: always
-          artifacts:
-            paths:
-              - target/surefire-reports
+          path: test-results
 
 workflows:
   build_and_test:
