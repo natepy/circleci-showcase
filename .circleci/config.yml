@@ -17,3 +17,4 @@ jobs:
       - run:
           name: Run Tests
           command: mvn test
+          working_directory: ~/circleci-showcase
