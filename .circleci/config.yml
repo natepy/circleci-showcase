@@ -7,21 +7,4 @@ jobs:
     steps:
       - checkout
       - run: java --version
-
-
-  test:
-    docker:
-      - image: cimg/openjdk:17.0.5
-    steps:
-      - checkout
-      - run:
-          name: Run Tests
-          command: mvn test
-
-workflows:
-  build_and_test:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - run: mvn test
