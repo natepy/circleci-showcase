@@ -35,3 +35,7 @@ workflows:
       - test:
           requires:
             - build
+
+    test_only:
+      jobs:
+        - test
